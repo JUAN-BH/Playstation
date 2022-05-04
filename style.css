@@ -1,0 +1,551 @@
+@charset "UTF-8";
+/* CSS Document */
+
+/*
+
+0 - UNIVERSALES
+===========================
+
+1 - TEXTOS
+===========================
+
+2- HEADER  (MENU)
+===========================
+
+3- SECTION EN INDEX
+
+===========================
+
+4- ENTRADAS INDEX
+
+===========================
+
+5- NOTICIAS
+
+===========================
+
+6- FOOTER
+
+===========================
+
+7-RESPONSIVE
+
+*/
+
+/* 0 - UNIVERSALES */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* https://developer.mozilla.org/es/docs/Web/CSS/var */
+:root {
+  --uno: #f9c346;
+  --dos: #e7a100;
+  --tres: #fc7b00;
+  --cuatro: #d42600;
+  --cinco: #660203;
+  --seis: #00439c;
+}
+
+body {
+  background: black;
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  font-size: 100%;
+  color: white;
+  overflow-x: hidden;
+}
+
+/* ============================================================================================================ */
+/* ============================================================================================================ */
+/* ============================================================================================================ */
+
+/* 1 - TEXTOS */
+
+p {
+  font-weight: 400;
+  font-size: 0.8em;
+}
+
+h1 {
+  font-weight: 400;
+  font-size: 3.4em;
+}
+
+h2 {
+  font-weight: 500;
+  font-size: 3em;
+}
+
+h3 {
+  font-weight: 500;
+  font-size: 2.6em;
+}
+h4 {
+  font-weight: 500;
+  font-size: 2.2em;
+}
+h5 {
+  font-weight: 500;
+  font-size: 1.8em;
+}
+h6 {
+  font-weight: 500;
+  font-size: 1.4em;
+}
+
+.boton {
+  /* margin: 10px auto; */
+  /* margin-top: 55px; */
+  padding: 2px 4px;
+  background-color: transparent;
+  border: 1px solid #fff;
+  border-radius: 2px;
+  text-decoration: none;
+  color: #fff;
+}
+.boton:hover {
+  background: var(--seis);
+}
+
+/* ============================================================================================================ */
+/* ============================================================================================================ */
+/* ============================================================================================================ */
+
+/* 2 - HEADER (MENU) */
+#header-index {
+  width: 100vw;
+  height: 100vh;
+  position: relative;
+  overflow: hidden;
+  /*https://bennettfeely.com/clippy/ */
+  clip-path: polygon(100% 0, 100% 90%, 50% 100%, 0 95%, 0 0);
+
+  background: url("images/f1m.png");
+  background-repeat: repeat;
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+  background-position-y: 110%;
+}
+
+#menu-header {
+  position: absolute;
+  z-index: 2;
+  top: 50vh;
+  /*background: #00236b;*/
+  background-color: transparent;
+  width: 100%;
+  padding: 3px 0;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  text-align: center;
+  opacity: 50%;
+  transform: translateY(190%);
+}
+
+#menu-header:hover {
+  background: transparent;
+  opacity: 100%;
+}
+
+#menu-header .btmenu {
+  display: flex;
+  width: 100px;
+  height: 40px;
+  padding: 6px;
+  background: transparent;
+  margin: 0 38px;
+  font-size: 18px;
+  color: white;
+  /*quito linea inferiro*/
+  text-decoration: none;
+  justify-content: center;
+  border: 1mm double;
+
+  transition-property: background;
+  transition-duration: 1s;
+}
+
+#menu-header a:hover {
+  background: rgb(2, 123, 245);
+}
+
+#verMenu {
+  width: 30px;
+  height: auto;
+  position: absolute;
+  transform: translate(50%, 50%);
+  z-index: 3;
+  /*ocultar*/
+  display: none;
+}
+
+/*  3- SECTION EN INDEX */
+
+#section-index {
+  padding: 100px 0;
+  text-align: center;
+  color: white;
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  position: relative;
+}
+
+#section-index p {
+  width: 600px;
+  margin: 30px auto;
+  text-align: center;
+}
+#section-index .boton--viewMore {
+  width: 120px;
+  margin: auto;
+  padding: 6px;
+  background: transparent;
+  border: 1px solid #fff;
+  text-decoration: none;
+  color: white;
+  transition: all 0.2s;
+}
+#section-index .boton--viewMore:hover {
+  background: rgb(2, 123, 245);
+}
+
+/* ============================================================================================================ */
+/* ============================================================================================================ */
+/* ============================================================================================================ */
+
+/* 4- ENTRADAS INDEX */
+#entradas-index {
+  width: 100vw;
+  /*background: var(--tres);
+	https://bennettfeely.com/clippy/ */
+  clip-path: polygon(50% 0%, 100% 9%, 100% 92%, 50% 100%, 0 92%, 0 9%);
+  padding: 100px 0;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+
+  background: url("images/f1n.png");
+  background-repeat: repeat;
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+.entrada {
+  display: flex;
+  flex-flow: column;
+  margin: 0 30px;
+  text-align: center;
+  text-decoration: none;
+}
+
+.entrada figure {
+  width: 250px;
+  height: 250px;
+  border-radius: 50%;
+  background: var(--uno);
+  margin: 0 0 20px 0;
+  position: relative;
+  display: flex;
+  flex-flow: row;
+}
+
+.entrada figure:hover {
+  box-shadow: 0px 0px 15px whitesmoke;
+}
+
+.LC {
+  width: 250px;
+  height: 250px;
+  border-radius: 50%;
+}
+
+.plus-entrada {
+  position: absolute;
+  z-index: 1;
+  top: 60%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  opacity: 0;
+  transition: all linear 0.3s;
+}
+
+.entrada figure:hover .plus-entrada {
+  top: 50%;
+  left: 50%;
+  opacity: 1;
+}
+
+.entrada h5 {
+  text-decoration: none;
+  color: white;
+}
+
+/* ============================================================================================================ */
+/* ============================================================================================================ */
+/* ============================================================================================================ */
+
+/* 5- NOTICIAS */
+/* https://css-tricks.com/snippets/css/complete-guide-grid/ */
+
+#wrap-news {
+  width: 80vw;
+  margin: 100px auto;
+  background: black;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: 150px 150px 150px 150px;
+}
+
+.news1 {
+  grid-column-start: 1;
+  grid-column-end: 3;
+  grid-row-start: 1;
+  grid-row-end: 5;
+  background: black;
+  padding: 20px;
+}
+
+.wrap-img-news {
+  width: 100%;
+  height: auto;
+  /*background: var(--uno);*/
+  margin-bottom: 10px;
+}
+
+.IN {
+  width: 100%;
+  height: 100%;
+}
+
+.wrap-img-news1 {
+  width: 100%;
+  height: auto;
+  /*background: var(--uno);*/
+  margin-bottom: 10px;
+}
+
+#PS5 {
+  width: 100%;
+  height: 100%;
+}
+
+.news {
+  height: 100%;
+  padding: 20px;
+  grid-column-start: auto;
+  grid-column-end: auto;
+  grid-row-start: auto;
+  grid-row-end: span 2;
+  background: var(black);
+}
+
+/* ============================================================================================================ */
+/* ============================================================================================================ */
+/* ============================================================================================================ */
+
+/* 6 - FOOTER */
+
+#footer-index {
+  /*background: var(--dos);*/
+  clip-path: polygon(50% 20%, 100% 0, 100% 100%, 0 100%, 0 0);
+  padding: 85px 0;
+  position: relative;
+
+  background: url("images/f1n.png");
+  background-repeat: repeat;
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+#logo-footer {
+  width: 300px;
+  height: 120px;
+  /*background: var(--tres);*/
+  margin: 60px auto 0 auto;
+  position: relative;
+}
+
+#logof {
+  width: 120px;
+  height: 120px;
+  transform: translateX(80%);
+}
+
+#info-footer {
+  width: 100%;
+  text-align: center;
+  margin: 20px 0;
+}
+
+#info-footer li {
+  width: 100%;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  align-items: center;
+}
+
+#btTop {
+  background: black;
+  width: 40px;
+  height: 40px;
+  position: absolute;
+  right: 20px;
+  bottom: 80%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  border: 1mm double;
+
+  transition-property: background;
+  transition-duration: 1s;
+}
+
+#btTop span {
+  font-size: 2em !important;
+  color: white;
+}
+#btTop:hover {
+  background: rgb(2, 123, 245);
+}
+
+/* ============================================================================================================ */
+/* ============================================================================================================ */
+/* ============================================================================================================ */
+
+/* 7 - RESPONSIVE */
+@media screen and (max-width: 1120px) {
+  body {
+    font-size: 80%;
+  }
+}
+
+@media screen and (max-width: 1050px) {
+  #wrap-news {
+    width: 90vw;
+  }
+}
+
+@media screen and (max-width: 950px) {
+  /* 5- NOTICIAS */
+  #wrap-news {
+    width: 90vw;
+    margin: 100px auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: auto auto auto auto;
+  }
+  .wrap-img-news1 {
+    width: 100%;
+    height: auto;
+    margin-bottom: 10px;
+  }
+  .news {
+    padding: 20px;
+    grid-column-start: auto;
+    grid-column-end: span 2;
+    grid-row-start: auto;
+    grid-row-end: span 2;
+  }
+}
+
+@media screen and (max-width: 910px) {
+  /* 4- ENTRADAS INDEX */
+  #entradas-index {
+    display: flex;
+    flex-flow: column;
+  }
+  .entrada figure {
+    margin: auto;
+    margin-top: 4%;
+  }
+}
+
+@media screen and (max-width: 750px) {
+  #wrap-news {
+    width: 90vw;
+    margin: 100px auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto auto auto;
+  }
+  .wrap-img-news1 {
+    width: 100%;
+    height: auto;
+    margin-bottom: 10px;
+  }
+  .news {
+    padding: 20px;
+    grid-column-start: auto;
+    grid-column-end: auto;
+    grid-row-start: auto;
+    grid-row-end: auto;
+  }
+  .news1 {
+    grid-column-start: 1;
+    grid-column-end: 3;
+    grid-row-start: 1;
+    grid-row-end: auto;
+    padding: 20px;
+  }
+}
+
+@media screen and (min-width: 690px) {
+  /*[3] MENU ***************************************************************************************** */
+  #menu-header a {
+    /*font-size:20px;*/
+    display: flex;
+    flex-flow: row;
+    padding: 5px 10px;
+    justify-content: center;
+  }
+  #menu-header {
+    /*font-size:20px;*/
+    display: flex;
+    flex-flow: row;
+    padding: 5px 10px;
+    justify-content: center;
+  }
+}
+
+@media screen and (max-width: 640px) {
+  #section-index p {
+    width: auto;
+  }
+  #verMenu {
+    display: block;
+  }
+  #menu-header {
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    margin: auto;
+    clip-path: none;
+  }
+  #menu-header:hover {
+    background: none;
+  }
+  #menu-header a {
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    margin: 2% auto;
+  }
+}
+
+@media screen and (max-width: 640px) {
+  #menu-header {
+    background-color: transparent;
+    transform: translateY(30%);
+  }
+}
